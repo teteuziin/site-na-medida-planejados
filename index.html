@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Na Medida Móveis Planejados e Granitos — Salvador/BA</title>
+<meta name="description" content="Móveis planejados e granitos sob medida em Salvador. Há 12 anos medindo, projetando e entregando a casa inteira — atendimento técnico no seu imóvel e orçamento pelo WhatsApp.">
+<link rel="icon" href="media/logo-na-medida.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Saira:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FurnitureStore",
+  "name": "Na Medida Móveis Planejados e Granitos",
+  "description": "Móveis planejados e granitos sob medida em Salvador/BA. Atendimento técnico no imóvel do cliente, projeto 3D, produção e instalação.",
+  "telephone": "+55 71 98120-1033",
+  "address": { "@type": "PostalAddress", "addressLocality": "Salvador", "addressRegion": "BA", "addressCountry": "BR" },
+  "sameAs": ["https://www.instagram.com/moveis.namedidaofc/"]
+}
+</script>
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --papel:#F6F1E7;          /* fundo — papel quente, tintado p/ madeira */
+  --papel-2:#EEE4D0;        /* elevação / faixas */
+  --superficie:#FFFDF7;     /* inputs e molduras */
+  --tinta:#221A14;          /* texto principal (quase-preto quente) */
+  --tinta-2:#4C4136;        /* texto secundário */
+  --vermelho:#A40405;       /* âncora — vermelho da régua da logo */
+  --vermelho-hover:#870304;
+  --madeira:#8A5A2B;        /* apoio gráfico (uso grande/decorativo) */
+  --linha:#D9CDB2;          /* hairlines */
+  --f-disp:"Saira Condensed",sans-serif;
+  --f-body:"Saira",sans-serif;
+  --sec:6rem;               /* respiro vertical desktop */
+  --r:6px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--f-body);
+  background:var(--papel);
+  color:var(--tinta);
+  font-size:1rem;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+/* grão tátil sutil (tactile realism) */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:2000;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1400px;margin-inline:auto;padding-inline:1rem}
+@media(min-width:768px){.wrap{padding-inline:2rem}}
+::selection{background:var(--vermelho);color:var(--superficie)}
+:focus-visible{outline:3px solid var(--vermelho);outline-offset:2px}
+
+/* ============ TIPOGRAFIA ============ */
+h1,h2{font-family:var(--f-disp);font-weight:800;letter-spacing:-0.02em;line-height:1.02;text-wrap:balance}
+.lead{font-size:1.1875rem;line-height:1.55;max-width:65ch}
+p{max-width:65ch}
+.sec-title{font-size:clamp(2.3rem,4.6vw,3.6rem);font-weight:700}
+.sec-num{
+  font-family:var(--f-disp);font-weight:800;color:var(--vermelho);
+  font-size:clamp(3.6rem,6vw,5.2rem);line-height:.9;letter-spacing:-0.02em;
+  font-variant-numeric:tabular-nums;
+}
+figcaption,.cap{font-size:.8125rem;line-height:1.45;color:var(--tinta-2);margin-top:.6rem;max-width:42ch}
+
+/* reveal por linha (line mask) — só com suporte a scroll-driven */
+.rl{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.rl>span{display:block}
+@supports (animation-timeline: view()){
+  .rl>span{transform:translateY(112%);animation:lineUp linear both;animation-timeline:view();animation-range:entry 0% entry 58%}
+  @keyframes lineUp{to{transform:translateY(0)}}
+  .sec-num{opacity:0;animation:numIn ease-out both;animation-timeline:view();animation-range:entry 0% entry 55%}
+  @keyframes numIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+}
+
+/* ============ BOTÕES ============ */
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  background:var(--vermelho);color:var(--superficie);
+  font-family:var(--f-body);font-weight:600;font-size:1rem;line-height:1;
+  padding:1.05rem 1.7rem;border:2px solid var(--vermelho);border-radius:var(--r);
+  text-decoration:none;cursor:pointer;
+  transition:background-color .25s ease,border-color .25s ease,color .25s ease,transform .25s ease;
+}
+.btn:hover{background:var(--vermelho-hover);border-color:var(--vermelho-hover);transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn.ghost{background:transparent;color:var(--tinta);border-color:var(--tinta)}
+.btn.ghost:hover{background:transparent;color:var(--vermelho);border-color:var(--vermelho);transform:translateY(-2px)}
+
+/* ============ HEADER ============ */
+header{border-bottom:1px solid var(--linha)}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-top:1.1rem;padding-bottom:1.1rem}
+.brand{display:flex;align-items:center;gap:.9rem;text-decoration:none}
+.brand img{width:118px;height:auto}
+.brand-name{font-family:var(--f-disp);font-weight:700;font-size:1.35rem;letter-spacing:.01em;line-height:1.05}
+.brand-name small{display:block;font-family:var(--f-body);font-weight:500;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-2)}
+nav.main{display:none}
+@media(min-width:1024px){
+  nav.main{display:flex;gap:2rem}
+  nav.main a{font-weight:500;font-size:.95rem;text-decoration:none;padding:.3rem 0;border-bottom:2px solid transparent;transition:color .25s ease,border-color .25s ease}
+  nav.main a:hover{color:var(--vermelho);border-color:var(--vermelho)}
+}
+.header-cta{padding:.8rem 1.3rem;font-size:.95rem}
+@media(max-width:560px){.brand img{width:92px}.brand-name{font-size:1.15rem}.header-cta{display:none}}
+/* régua da marca — faixa de medição sob o header */
+.regua{height:12px;border-bottom:1px solid var(--linha);
+  background:repeating-linear-gradient(to right,var(--tinta) 0 1px,transparent 1px 10px) left bottom/100% 5px no-repeat,
+             repeating-linear-gradient(to right,var(--tinta) 0 1px,transparent 1px 50px) left bottom/100% 11px no-repeat;}
+
+/* ============ HERO ============ */
+.hero{display:grid;grid-template-columns:1fr;gap:2.5rem;padding-top:3.5rem;padding-bottom:var(--sec)}
+@media(min-width:900px){.hero{grid-template-columns:1fr 1fr;gap:4rem;align-items:center;padding-top:4.5rem}}
+.hero h1{font-size:clamp(3.1rem,7.4vw,5.8rem);text-transform:uppercase}
+.hero h1 .verm{color:var(--vermelho)}
+.hero .lead{margin-top:1.4rem;color:var(--tinta-2)}
+.hero .lead strong{color:var(--tinta);font-weight:600}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.1rem}
+.hero-dado{margin-top:2rem;padding-top:1.1rem;border-top:1px solid var(--linha);font-size:.9rem;color:var(--tinta-2);display:flex;flex-wrap:wrap;gap:.4rem 2rem}
+.hero-dado b{color:var(--tinta);font-variant-numeric:tabular-nums}
+.folha{border:1.5px solid var(--tinta);border-radius:var(--r);background:var(--superficie);padding:.65rem}
+.folha .ticks{height:10px;margin-bottom:.65rem;
+  background:repeating-linear-gradient(to right,var(--tinta) 0 1px,transparent 1px 10px) left top/100% 4px no-repeat,
+             repeating-linear-gradient(to right,var(--tinta) 0 1px,transparent 1px 50px) left top/100% 10px no-repeat;}
+.folha img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.folha figcaption{padding:.35rem .25rem 0}
+
+/* ============ SEÇÕES NUMERADAS (grid 12 colunas) ============ */
+section.bloco{padding-top:var(--sec);padding-bottom:0}
+section.bloco:last-of-type{padding-bottom:var(--sec)}
+.sec{display:grid;grid-template-columns:1fr;gap:1.6rem}
+@media(min-width:1024px){
+  .sec{grid-template-columns:repeat(12,1fr);gap:0 1.5rem}
+  .sec-head{grid-column:1/5}
+  .sec-text{grid-column:5/8;padding-top:.7rem}
+  .sec-media{grid-column:8/13}
+}
+.sec-head .sec-num{margin-bottom:.9rem}
+.sec-text p + p{margin-top:1rem}
+.sec-text .mini{font-size:.9rem;color:var(--tinta-2)}
+/* lista pautada de ambientes / passos */
+.pautada{list-style:none;margin-top:1.4rem;border-top:1px solid var(--linha)}
+.pautada li{padding:.72rem 0;border-bottom:1px solid var(--linha);font-weight:500;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.2rem 1rem;align-items:baseline}
+.pautada li span{font-size:.85rem;color:var(--tinta-2);font-weight:400;text-align:right}
+.passo{margin-top:1.5rem}
+.passo h3{font-family:var(--f-disp);font-weight:700;font-size:1.55rem;letter-spacing:-0.01em;line-height:1.1}
+.passo h3 .n{color:var(--vermelho);font-variant-numeric:tabular-nums;margin-right:.5rem}
+.passo p{margin-top:.35rem;color:var(--tinta-2);font-size:.98rem}
+
+/* ============ VÍDEOS (wrapper 9/16) ============ */
+.reel{position:relative;width:100%;max-width:350px;aspect-ratio:9/16;border-radius:var(--r);overflow:hidden;background:var(--tinta);border:1.5px solid var(--tinta)}
+.reel.r45{aspect-ratio:4/5}
+.reel video{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+@media(hover:hover) and (pointer:fine){.reel:hover video{transform:scale(1.02)}}
+.reel .play{position:absolute;inset:0;display:grid;place-items:center;background:transparent;border:0;cursor:pointer;z-index:2;transition:opacity .3s ease}
+.reel .play i{width:76px;height:76px;border-radius:50%;background:var(--vermelho);display:grid;place-items:center;transition:background-color .25s ease,transform .25s ease}
+.reel .play i::after{content:"";border-left:23px solid var(--superficie);border-top:14px solid transparent;border-bottom:14px solid transparent;margin-left:6px}
+.reel .play:hover i{background:var(--vermelho-hover);transform:translateY(-2px)}
+.reel[data-state="playing"] .play{opacity:0;pointer-events:none}
+.reel-duo{display:grid;gap:1.6rem}
+@media(min-width:560px){.reel-duo{grid-template-columns:1fr 1fr}}
+.sec-media .reel{margin-inline:auto}
+@media(min-width:1024px){.sec-media .reel{margin-inline:0;margin-left:auto}}
+
+/* faixa de mídia complementar dentro da seção */
+.faixa{display:grid;gap:1.6rem;margin-top:3rem}
+@media(min-width:900px){.faixa{grid-template-columns:350px 1fr;align-items:start}}
+.faixa figure.foto img{width:100%;height:100%;object-fit:cover;border-radius:var(--r);border:1.5px solid var(--tinta);aspect-ratio:16/10}
+@media(min-width:900px){.faixa figure.foto img{aspect-ratio:auto;min-height:420px}}
+
+/* galeria de ambientes */
+.galeria{display:grid;gap:1.6rem;margin-top:3rem}
+@media(min-width:900px){.galeria{grid-template-columns:1.25fr 1fr 1fr;align-items:start}}
+.galeria figure img{width:100%;object-fit:cover;border-radius:var(--r);border:1.5px solid var(--tinta)}
+.galeria .g1 img{aspect-ratio:4/5.6}
+.galeria .g2 img{aspect-ratio:4/4.4}
+.galeria .g3 img{aspect-ratio:4/5}
+
+/* ============ DEPOIMENTOS (faixa escura) ============ */
+.depo{background:var(--tinta);color:var(--papel);margin-top:var(--sec);padding-top:var(--sec);padding-bottom:var(--sec)}
+.depo h2{font-size:clamp(2.1rem,4vw,3.2rem);font-weight:700;max-width:22ch}
+.depo .origem{margin-top:1rem;color:#CBBFA9;font-size:.95rem;max-width:65ch}
+.depo-lista{margin-top:3rem;display:grid;gap:2.6rem}
+@media(min-width:900px){.depo-lista{grid-template-columns:1fr 1fr;gap:3rem 4rem}}
+.depo blockquote{font-family:var(--f-disp);font-weight:600;letter-spacing:0;line-height:1.14}
+.depo blockquote.grande{font-size:clamp(2rem,3.4vw,2.9rem)}
+.depo blockquote.medio{font-size:clamp(1.6rem,2.6vw,2.2rem)}
+.depo blockquote::before{content:"“";color:var(--vermelho);margin-right:.05em}
+.depo .quem{margin-top:.7rem;font-size:.85rem;color:#CBBFA9}
+
+/* ============ ORÇAMENTO ============ */
+.orc{display:grid;gap:2.5rem}
+@media(min-width:1024px){.orc{grid-template-columns:5fr 7fr;gap:4rem}}
+.orc h2{font-size:clamp(2.3rem,4.6vw,3.6rem);font-weight:700}
+.orc .lead{margin-top:1.2rem;color:var(--tinta-2)}
+.orc .direto{margin-top:1.8rem;font-size:1rem}
+.orc .direto a{font-weight:700;color:var(--vermelho);text-decoration:none;border-bottom:2px solid var(--vermelho)}
+form.montador{background:var(--superficie);border:1.5px solid var(--tinta);border-radius:var(--r);padding:1.6rem}
+@media(min-width:768px){form.montador{padding:2.2rem}}
+form.montador .ticks{height:10px;margin-bottom:1.4rem;
+  background:repeating-linear-gradient(to right,var(--tinta) 0 1px,transparent 1px 10px) left top/100% 4px no-repeat,
+             repeating-linear-gradient(to right,var(--tinta) 0 1px,transparent 1px 50px) left top/100% 10px no-repeat;}
+.campo{margin-bottom:1.3rem}
+.campo label{display:block;font-weight:600;font-size:.92rem;margin-bottom:.45rem}
+.campo label .op{font-weight:400;color:var(--tinta-2);font-size:.82rem}
+.campo input,.campo select,.campo textarea{
+  width:100%;font-family:var(--f-body);font-size:1rem;color:var(--tinta);
+  background:var(--papel);border:1.5px solid var(--linha);border-radius:var(--r);
+  padding:.85rem 1rem;transition:border-color .25s ease,background-color .25s ease;
+}
+.campo textarea{min-height:110px;resize:vertical}
+.campo input:focus,.campo select:focus,.campo textarea:focus{outline:none;border-color:var(--vermelho);background:var(--superficie)}
+.campo [aria-invalid="true"]{border-color:var(--vermelho);background:#F9E9E4}
+.erro-msg{display:none;margin-top:.45rem;font-size:.88rem;color:#8F0304;font-weight:500}
+.erro-msg.on{display:block}
+.duo{display:grid;gap:0}
+@media(min-width:640px){.duo{grid-template-columns:1fr 1fr;gap:1.3rem}}
+form.montador .btn{width:100%;justify-content:center;margin-top:.4rem}
+.form-nota{margin-top:1rem;font-size:.85rem;color:var(--tinta-2);text-align:center}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid var(--linha);margin-top:var(--sec);padding-top:3.2rem;padding-bottom:2.6rem}
+.foot{display:grid;gap:2.2rem}
+@media(min-width:900px){.foot{grid-template-columns:1.3fr 1fr 1fr;gap:3rem}}
+.foot img{width:150px;height:auto}
+.foot .slogan{margin-top:1.1rem;font-family:var(--f-disp);font-weight:600;font-size:1.3rem;line-height:1.2;max-width:26ch}
+.foot h4{font-family:var(--f-body);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-2);margin-bottom:.9rem}
+.foot ul{list-style:none}
+.foot li{margin-bottom:.55rem}
+.foot a{text-decoration:none;font-weight:500;transition:color .25s ease}
+.foot a:hover{color:var(--vermelho)}
+.foot-base{margin-top:2.6rem;padding-top:1.2rem;border-top:1px solid var(--linha);font-size:.85rem;color:var(--tinta-2);display:flex;flex-wrap:wrap;gap:.4rem 2rem;justify-content:space-between}
+
+@media(max-width:1023px){:root{--sec:4rem}}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-in">
+    <a class="brand" href="#top" aria-label="Na Medida Móveis Planejados e Granitos — início">
+      <img src="media/logo-na-medida.png" alt="Logotipo Na Medida Móveis Planejados">
+      <span class="brand-name">Na Medida<small>Móveis Planejados e Granitos</small></span>
+    </a>
+    <nav class="main" aria-label="Navegação principal">
+      <a href="#projetos">Projetos</a>
+      <a href="#ambientes">Ambientes</a>
+      <a href="#atendimento">Atendimento</a>
+      <a href="#processo">Processo</a>
+      <a href="#depoimentos">Clientes</a>
+    </nav>
+    <a class="btn header-cta" href="#orcamento">Pedir orçamento</a>
+  </div>
+  <div class="regua" aria-hidden="true"></div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="wrap hero">
+    <div>
+      <h1>
+        <span class="rl"><span>Seu sonho,</span></span>
+        <span class="rl"><span class="verm">nosso compromisso.</span></span>
+      </h1>
+      <p class="lead">Há <strong>12 anos</strong> a gente mede, projeta e entrega <strong>móveis planejados e granitos sob medida em Salvador</strong>. Quem te atende é o <strong>João Paulo</strong> — da visita técnica no seu imóvel até o último ajuste da instalação.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="#orcamento">Montar meu orçamento</a>
+        <a class="btn ghost" href="#projetos">Ver projetos entregues</a>
+      </div>
+      <div class="hero-dado">
+        <span><b>12 anos</b> de mercado</span>
+        <span><b>Salvador/BA</b> e região</span>
+        <span>Orçamento pelo <b>WhatsApp</b></span>
+      </div>
+    </div>
+    <figure class="folha">
+      <div class="ticks" aria-hidden="true"></div>
+      <img src="media/hero-bar-led.jpg" alt="Bar sob medida entregue pela Na Medida: aparador em madeira com LED, bancada clara e prateleira iluminada" fetchpriority="high">
+      <figcaption>Bar e aparador sob medida com LED — projeto entregue.</figcaption>
+    </figure>
+  </div>
+
+  <!-- 01 · VIVVER ULISSES -->
+  <section class="bloco" id="projetos" aria-labelledby="t1">
+    <div class="wrap">
+      <div class="sec">
+        <div class="sec-head">
+          <div class="sec-num" aria-hidden="true">01</div>
+          <h2 class="sec-title" id="t1">
+            <span class="rl"><span>Onze apartamentos</span></span>
+            <span class="rl"><span>num condomínio só</span></span>
+          </h2>
+        </div>
+        <div class="sec-text">
+          <p>No <strong>Vivver Ulisses, em Sussuarana</strong>, a gente já entregou 11 apartamentos. Cada um foi medido no local, conversado com o morador e instalado pela nossa equipe.</p>
+          <p>No vídeo, o João Paulo apresenta um apartamento completo — cozinha, quarto e banheiro — do jeito que a gente entrega: pronto pra morar.</p>
+        </div>
+        <div class="sec-media">
+          <div class="reel" data-state="paused">
+            <video src="media/vivver-tour.mp4" poster="media/posters/vivver-tour.jpg" preload="metadata" playsinline aria-label="Vídeo: João Paulo apresenta apartamento completo entregue no Vivver Ulisses"></video>
+            <button class="play" type="button" aria-label="Assistir ao tour do apartamento no Vivver Ulisses"><i aria-hidden="true"></i></button>
+          </div>
+          <p class="cap">Tour falado: apartamento completo entregue no Vivver Ulisses.</p>
+        </div>
+      </div>
+      <div class="faixa">
+        <div>
+          <div class="reel" data-state="paused">
+            <video src="media/vivver-entrega-11.mp4" poster="media/posters/vivver-entrega-11.jpg" preload="metadata" playsinline aria-label="Vídeo: a 11ª entrega no Vivver Ulisses, cozinha ganhando forma"></video>
+            <button class="play" type="button" aria-label="Assistir à 11ª entrega no Vivver Ulisses"><i aria-hidden="true"></i></button>
+          </div>
+          <p class="cap">A 11ª entrega ganhando forma: cozinha com LED nos armários.</p>
+        </div>
+        <figure class="foto">
+          <img src="media/cozinha-entregue.jpg" alt="Cozinha entregue pela Na Medida: armários até o teto, torre de forno e bancada em granito preto" loading="lazy">
+          <figcaption>Cozinha entregue: armários até o teto e bancada em granito preto.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 · AMBIENTES -->
+  <section class="bloco" id="ambientes" aria-labelledby="t2">
+    <div class="wrap">
+      <div class="sec">
+        <div class="sec-head">
+          <div class="sec-num" aria-hidden="true">02</div>
+          <h2 class="sec-title" id="t2">
+            <span class="rl"><span>A casa inteira,</span></span>
+            <span class="rl"><span>ambiente por ambiente</span></span>
+          </h2>
+        </div>
+        <div class="sec-text">
+          <p>Cozinha é só o começo. A gente projeta e entrega a casa inteira no mesmo padrão de acabamento — sempre a partir das medidas do seu imóvel, nunca de um módulo pronto.</p>
+          <ul class="pautada">
+            <li>Cozinhas completas <span>com granitos</span></li>
+            <li>Quartos e roupeiros <span>sob medida</span></li>
+            <li>Salas <span>painel, ripado e cristaleira</span></li>
+            <li>Banheiros <span>bancadas e espelhados</span></li>
+            <li>Home office e escritórios <span>residencial e comercial</span></li>
+          </ul>
+        </div>
+        <div class="sec-media">
+          <div class="reel" data-state="paused">
+            <video src="media/cozinha-sala.mp4" poster="media/posters/cozinha-sala.jpg" preload="metadata" playsinline aria-label="Vídeo: tour por cozinha e sala entregues, com painel ripado e bancada em pedra"></video>
+            <button class="play" type="button" aria-label="Assistir ao tour da cozinha e da sala"><i aria-hidden="true"></i></button>
+          </div>
+          <p class="cap">Cozinha e sala entregues: instalação do painel ripado e bancada em pedra.</p>
+        </div>
+      </div>
+      <div class="galeria">
+        <figure class="g1">
+          <img src="media/sala-rack-cristaleira.jpg" alt="Sala entregue: rack longo em madeira, painel de TV com LED e cristaleira azul com portas de vidro" loading="lazy">
+          <figcaption>Sala: rack em madeira, painel com LED e cristaleira.</figcaption>
+        </figure>
+        <figure class="g2">
+          <img src="media/home-office.jpg" alt="Home office entregue: parede inteira de armários em madeira com bancada para três estações de trabalho" loading="lazy">
+          <figcaption>Home office: bancada contínua e armários até o teto.</figcaption>
+        </figure>
+        <figure class="g3">
+          <img src="media/escritorio-reuniao.jpg" alt="Escritório entregue: mesa de reunião em madeira e bancada de trabalho com armários aéreos" loading="lazy">
+          <figcaption>Escritório e sala de reunião sob medida.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 · ATENDIMENTO TÉCNICO -->
+  <section class="bloco" id="atendimento" aria-labelledby="t3">
+    <div class="wrap">
+      <div class="sec">
+        <div class="sec-head">
+          <div class="sec-num" aria-hidden="true">03</div>
+          <h2 class="sec-title" id="t3">
+            <span class="rl"><span>O atendimento técnico</span></span>
+            <span class="rl"><span>é na sua casa</span></span>
+          </h2>
+        </div>
+        <div class="sec-text">
+          <p>Antes de projetar, a gente entende de verdade o que você precisa e deseja. A visita técnica é <strong>no seu imóvel</strong>: medimos o ambiente com precisão e sanamos suas dúvidas de frente.</p>
+          <p>Suas preferências são confirmadas <strong>antes de qualquer decisão</strong> — cor, número de portas, posição da cama, pontos elétricos. É assim que o projeto nasce personalizado, e não adaptado.</p>
+          <p class="mini">Nos vídeos, o João Paulo em atendimento: dúvidas sanadas com o cliente e medidas conferidas no ambiente.</p>
+        </div>
+        <div class="sec-media">
+          <div class="reel-duo">
+            <div>
+              <div class="reel r45" data-state="paused">
+                <video src="media/atendimento-1.mp4" poster="media/posters/atendimento-1.jpg" preload="metadata" playsinline aria-label="Vídeo: João Paulo em visita técnica na casa do cliente"></video>
+                <button class="play" type="button" aria-label="Assistir à visita técnica"><i aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <div>
+              <div class="reel r45" data-state="paused">
+                <video src="media/atendimento-2.mp4" poster="media/posters/atendimento-2.jpg" preload="metadata" playsinline aria-label="Vídeo: conferência de medidas e preferências com o cliente"></video>
+                <button class="play" type="button" aria-label="Assistir à conferência de medidas"><i aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </div>
+          <p class="cap">Atendimento técnico no ambiente do cliente — carrossel de 12/11/2026.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · LAR FRANCISCANO -->
+  <section class="bloco" id="institucional" aria-labelledby="t4">
+    <div class="wrap">
+      <div class="sec">
+        <div class="sec-head">
+          <div class="sec-num" aria-hidden="true">04</div>
+          <h2 class="sec-title" id="t4">
+            <span class="rl"><span>Uma instituição inteira</span></span>
+            <span class="rl"><span>confiou na gente</span></span>
+          </h2>
+        </div>
+        <div class="sec-text">
+          <p>No <strong>Lar Franciscano</strong>, a obra foi completa: <strong>seis roupeiros</strong>, a farmácia — com o armazenamento dos medicamentos — e a copa, numa instituição com 458 anos de história.</p>
+          <p>É o mesmo cuidado de um apartamento, em escala maior: medir tudo, produzir e instalar sem atrapalhar a rotina de quem vive e trabalha lá.</p>
+        </div>
+        <div class="sec-media">
+          <div class="reel" data-state="paused">
+            <video src="media/lar-franciscano.mp4" poster="media/posters/lar-franciscano.jpg" preload="metadata" playsinline aria-label="Vídeo: produção e instalação dos móveis do Lar Franciscano"></video>
+            <button class="play" type="button" aria-label="Assistir à obra do Lar Franciscano"><i aria-hidden="true"></i></button>
+          </div>
+          <p class="cap">Produção no Lar Franciscano: roupeiros, farmácia e copa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 · PROCESSO -->
+  <section class="bloco" id="processo" aria-labelledby="t5">
+    <div class="wrap">
+      <div class="sec">
+        <div class="sec-head">
+          <div class="sec-num" aria-hidden="true">05</div>
+          <h2 class="sec-title" id="t5">
+            <span class="rl"><span>Do projeto 3D</span></span>
+            <span class="rl"><span>à instalação</span></span>
+          </h2>
+        </div>
+        <div class="sec-text">
+          <div class="passo">
+            <h3><span class="n">1.</span>Projeto 3D</h3>
+            <p>Você vê o ambiente pronto antes de a gente cortar a primeira chapa.</p>
+          </div>
+          <div class="passo">
+            <h3><span class="n">2.</span>Orçamento</h3>
+            <p>Com o projeto aprovado, montamos o orçamento completo do seu ambiente.</p>
+          </div>
+          <div class="passo">
+            <h3><span class="n">3.</span>Produção</h3>
+            <p>Suas peças são produzidas na nossa marcenaria, na medida do projeto.</p>
+          </div>
+          <div class="passo">
+            <h3><span class="n">4.</span>Instalação</h3>
+            <p>A gente instala, ajusta e entrega o ambiente pronto pra usar.</p>
+          </div>
+          <p style="margin-top:1.6rem">E quando um móvel bom merece vida nova, a gente retira na sua casa e <strong>requalifica na marcenaria</strong> — como mostra o vídeo ao lado.</p>
+        </div>
+        <div class="sec-media">
+          <div class="reel" data-state="paused">
+            <video src="media/requalificacao.mp4" poster="media/posters/requalificacao.jpg" preload="metadata" playsinline aria-label="Vídeo: retirada de móveis na casa do cliente para requalificação na marcenaria"></video>
+            <button class="play" type="button" aria-label="Assistir aos bastidores da produção"><i aria-hidden="true"></i></button>
+          </div>
+          <p class="cap">Bastidores: retirada de móveis para requalificação na marcenaria.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="depo" id="depoimentos" aria-labelledby="tdep">
+    <div class="wrap">
+      <h2 id="tdep">
+        <span class="rl"><span>Quem recebeu,</span></span>
+        <span class="rl"><span>conta como ficou</span></span>
+      </h2>
+      <p class="origem">Mensagens reais de clientes depois da entrega, publicadas no destaque “Feedbacks” do nosso Instagram (2020). A gente não edita elogio: está aqui do jeito que chegou no WhatsApp.</p>
+      <div class="depo-lista">
+        <div>
+          <blockquote class="grande">Ficou tudo perfeito.</blockquote>
+          <p class="quem">Mensagem de cliente — WhatsApp</p>
+        </div>
+        <div>
+          <blockquote class="medio">Satisfeita. Nota 10.</blockquote>
+          <p class="quem">Mensagem de cliente — WhatsApp</p>
+        </div>
+        <div>
+          <blockquote class="medio">Ficou perfeito — um sonho realizado mesmo.</blockquote>
+          <p class="quem">Mensagem de cliente — WhatsApp</p>
+        </div>
+        <div>
+          <blockquote class="medio">Prazo e qualidade de serviço: é Na Medida. Sensacional.</blockquote>
+          <p class="quem">Mensagem de cliente — WhatsApp</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORÇAMENTO -->
+  <section class="bloco" id="orcamento" aria-labelledby="torc">
+    <div class="wrap orc">
+      <div>
+        <h2 id="torc">
+          <span class="rl"><span>Monte seu orçamento</span></span>
+        </h2>
+        <p class="lead">Conta pra gente o que você quer fazer. A mensagem cai direto no WhatsApp do João Paulo, que combina com você a visita técnica no seu imóvel.</p>
+        <p class="direto">Prefere chamar direto? <a href="https://wa.me/5571981201033?text=Oi%2C%20Jo%C3%A3o%20Paulo!%20Vim%20pelo%20site%20da%20Na%20Medida%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">WhatsApp (71) 98120-1033</a></p>
+      </div>
+      <form class="montador" id="montador" novalidate>
+        <div class="ticks" aria-hidden="true"></div>
+        <div class="campo">
+          <label for="f-ambiente">Qual ambiente? *</label>
+          <select id="f-ambiente" name="ambiente" required>
+            <option value="">Selecione o ambiente…</option>
+            <option>Cozinha</option>
+            <option>Quarto / roupeiro</option>
+            <option>Sala</option>
+            <option>Banheiro</option>
+            <option>Home office / escritório</option>
+            <option>Casa inteira</option>
+            <option>Outro ambiente</option>
+          </select>
+          <p class="erro-msg" id="e-ambiente" role="alert">Escolha o ambiente pra gente montar sua mensagem.</p>
+        </div>
+        <div class="duo">
+          <div class="campo">
+            <label for="f-medidas">Medidas aproximadas <span class="op">(se souber)</span></label>
+            <input id="f-medidas" name="medidas" type="text" inputmode="text" placeholder="Ex.: 3,20 m × 2,40 m">
+          </div>
+          <div class="campo">
+            <label for="f-nome">Seu nome <span class="op">(opcional)</span></label>
+            <input id="f-nome" name="nome" type="text" autocomplete="name" placeholder="Como te chamamos?">
+          </div>
+        </div>
+        <div class="campo">
+          <label for="f-quer">O que você quer fazer?</label>
+          <textarea id="f-quer" name="quer" placeholder="Ex.: cozinha completa com bancada em granito, torre de forno e LED nos armários"></textarea>
+        </div>
+        <button class="btn" type="submit">Enviar e falar com o João Paulo</button>
+        <p class="form-nota">Sem compromisso: o orçamento começa pela conversa e pela visita técnica.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="media/logo-na-medida.png" alt="Logotipo Na Medida Móveis Planejados">
+        <p class="slogan">Compromisso, atenção e responsabilidade fazem parte de cada projeto.</p>
+      </div>
+      <div>
+        <h4>Navegue</h4>
+        <ul>
+          <li><a href="#projetos">Projetos entregues</a></li>
+          <li><a href="#ambientes">Ambientes</a></li>
+          <li><a href="#atendimento">Atendimento técnico</a></li>
+          <li><a href="#processo">Como funciona</a></li>
+          <li><a href="#orcamento">Montar orçamento</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fale com a gente</h4>
+        <ul>
+          <li><a href="https://wa.me/5571981201033" target="_blank" rel="noopener">WhatsApp (71) 98120-1033</a></li>
+          <li><a href="https://www.instagram.com/moveis.namedidaofc/" target="_blank" rel="noopener">Instagram @moveis.namedidaofc</a></li>
+          <li>Salvador/BA</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>Na Medida Móveis Planejados e Granitos</span>
+      <span>Seu sonho, nosso compromisso.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Players: play/pause pelo botão central e pelo próprio vídeo; pausa fora da tela, sem retomada automática.
+document.querySelectorAll('.reel').forEach(function(box){
+  var video = box.querySelector('video');
+  var btn = box.querySelector('.play');
+  function sync(){
+    box.dataset.state = video.paused ? 'paused' : 'playing';
+    btn.setAttribute('aria-label', video.paused ? 'Assistir ao vídeo' : 'Pausar o vídeo');
+  }
+  btn.addEventListener('click', function(){
+    if (video.paused) { video.setAttribute('controls',''); video.play(); }
+    else { video.pause(); }
+  });
+  video.addEventListener('click', function(){ if (!video.paused) video.pause(); });
+  video.addEventListener('play', sync);
+  video.addEventListener('pause', sync);
+  video.addEventListener('ended', sync);
+  sync();
+});
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if (!e.isIntersecting) {
+      var v = e.target.querySelector('video');
+      if (v && !v.paused) v.pause();
+    }
+  });
+}, { threshold: 0.25 });
+document.querySelectorAll('.reel').forEach(function(box){ io.observe(box); });
+
+// Montador de orçamento -> WhatsApp
+document.getElementById('montador').addEventListener('submit', function(ev){
+  ev.preventDefault();
+  var amb = document.getElementById('f-ambiente');
+  var erro = document.getElementById('e-ambiente');
+  if (!amb.value) {
+    amb.setAttribute('aria-invalid','true');
+    erro.classList.add('on');
+    amb.focus();
+    return;
+  }
+  amb.removeAttribute('aria-invalid');
+  erro.classList.remove('on');
+  var med = document.getElementById('f-medidas').value.trim();
+  var nome = document.getElementById('f-nome').value.trim();
+  var quer = document.getElementById('f-quer').value.trim();
+  var linhas = ['Oi, João Paulo! Vim pelo site da Na Medida e quero um orçamento.'];
+  linhas.push('• Ambiente: ' + amb.value);
+  if (med) linhas.push('• Medidas aproximadas: ' + med);
+  if (quer) linhas.push('• O que eu quero: ' + quer);
+  if (nome) linhas.push('• Meu nome: ' + nome);
+  var url = 'https://wa.me/5571981201033?text=' + encodeURIComponent(linhas.join('\n'));
+  window.open(url, '_blank', 'noopener');
+});
+document.getElementById('f-ambiente').addEventListener('change', function(){
+  this.removeAttribute('aria-invalid');
+  document.getElementById('e-ambiente').classList.remove('on');
+});
+</script>
+</body>
+</html>
